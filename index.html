@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TM Energy - الموقع قيد الإنشاء</title>
+    <meta name="description" content="TM Energy - محركات بحرية، مولدات كهرباء، قطع غيار واكسسوارات. الموقع الجديد قيد الإنشاء.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="lantern-container">
+                <svg class="lantern-svg" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Lantern Top -->
+                    <path class="lantern-top" d="M30 10 Q50 0 70 10 L65 20 Q50 15 35 20 Z" fill="#D4AF37"/>
+                    <!-- Lantern Body -->
+                    <path class="lantern-body" d="M20 20 Q10 50 20 80 Q50 95 80 80 Q90 50 80 20 Q50 10 20 20" fill="url(#lanternGradient)"/>
+                    <!-- Lantern Bottom -->
+                    <path class="lantern-bottom" d="M25 80 Q50 90 75 80 L70 90 Q50 100 30 90 Z" fill="#D4AF37"/>
+                    <!-- Decorative Lines -->
+                    <path class="lantern-lines" d="M35 25 Q30 50 35 75 M50 22 Q50 50 50 78 M65 25 Q70 50 65 75" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                    <!-- Inner Glow -->
+                    <circle class="lantern-glow" cx="50" cy="50" r="20" fill="url(#glowGradient)" opacity="0.6"/>
+                    <!-- Hanging Ring -->
+                    <path class="lantern-ring" d="M45 10 Q50 0 55 10" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <defs>
+                        <linearGradient id="lanternGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#0d1642;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1a237e;stop-opacity:1" />
+                        </linearGradient>
+                        <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="loading-text">
+                <span class="loading-letter">ج</span>
+                <span class="loading-letter">ا</span>
+                <span class="loading-letter">ر</span>
+                <span class="loading-letter">ي</span>
+                <span class="loading-letter space"> </span>
+                <span class="loading-letter">ا</span>
+                <span class="loading-letter">ل</span>
+                <span class="loading-letter">ت</span>
+                <span class="loading-letter">ح</span>
+                <span class="loading-letter">م</span>
+                <span class="loading-letter">ي</span>
+                <span class="loading-letter">ل</span>
+                <span class="loading-letter">...</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Stars Background -->
+    <div class="stars-container" id="stars"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                            <path d="M20 30 L30 15 L40 30 L30 45 Z" fill="url(#logoGradient)"/>
+                            <circle cx="30" cy="30" r="8" fill="#0a0e27"/>
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#D4AF37"/>
+                                    <stop offset="100%" style="stop-color:#FFD700"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                    <span class="logo-text">TM<span class="logo-highlight">ENERGY</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">من نحن</a>
+                    <a href="#services" class="nav-link">خدماتنا</a>
+                    <a href="#contact" class="nav-link">تواصل معنا</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#about" class="mobile-nav-link">من نحن</a>
+            <a href="#services" class="mobile-nav-link">خدماتنا</a>
+            <a href="#contact" class="mobile-nav-link">تواصل معنا</a>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-decoration">
+                <!-- Crescent Moon -->
+                <div class="crescent-moon">
+                    <img src="images/crescent-moon.png" alt="هلال رمضان" class="crescent-moon-img">
+                </div>
+                <!-- Floating Lanterns -->
+                <div class="floating-lantern lantern-1">
+                    <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5 Q30 0 45 5 L42 12 Q30 8 18 12 Z" fill="#D4AF37"/>
+                        <path d="M10 12 Q5 35 10 55 Q30 65 50 55 Q55 35 50 12 Q30 5 10 12" fill="url(#fl1)"/>
+                        <path d="M12 55 Q30 62 48 55 L45 62 Q30 68 15 62 Z" fill="#D4AF37"/>
+                        <circle cx="30" cy="35" r="12" fill="url(#fg1)" opacity="0.7"/>
+                        <defs>
+                            <linearGradient id="fl1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a237e"/>
+                                <stop offset="100%" style="stop-color:#0d1642"/>
+                            </linearGradient>
+                            <radialGradient id="fg1" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.9"/>
+                                <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="floating-lantern lantern-2">
+                    <svg viewBox="0 0 50 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4 Q25 0 38 4 L35 10 Q25 7 15 10 Z" fill="#D4AF37"/>
+                        <path d="M8 10 Q4 30 8 48 Q25 57 42 48 Q46 30 42 10 Q25 4 8 10" fill="url(#fl2)"/>
+                        <path d="M10 48 Q25 54 40 48 L37 54 Q25 59 13 54 Z" fill="#D4AF37"/>
+                        <circle cx="25" cy="30" r="10" fill="url(#fg2)" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="fl2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a237e"/>
+                                <stop offset="100%" style="stop-color:#0d1642"/>
+                            </linearGradient>
+                            <radialGradient id="fg2" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.8"/>
+                                <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="floating-lantern lantern-3">
+                    <svg viewBox="0 0 40 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 Q20 0 30 3 L28 8 Q20 5 12 8 Z" fill="#D4AF37"/>
+                        <path d="M7 8 Q4 24 7 38 Q20 45 33 38 Q36 24 33 8 Q20 3 7 8" fill="url(#fl3)"/>
+                        <path d="M8 38 Q20 43 32 38 L30 43 Q20 47 10 43 Z" fill="#D4AF37"/>
+                        <circle cx="20" cy="24" r="8" fill="url(#fg3)" opacity="0.5"/>
+                        <defs>
+                            <linearGradient id="fl3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a237e"/>
+                                <stop offset="100%" style="stop-color:#0d1642"/>
+                            </linearGradient>
+                            <radialGradient id="fg3" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.7"/>
+                                <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down">
+                    <span class="badge-icon">🌙</span>
+                    <span class="badge-text">رمضان كريم</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up">
+                    <span class="title-line">موقعنا الجديد</span>
+                    <span class="title-line highlight">قيد الإنشاء</span>
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    نحن نعمل على بناء تجربة رقمية استثنائية تجمع بين قوة الأداء وجمال التصميم. ترقبوا المفاجآت قريباً!
+                </p>
+
+                <div class="hero-features" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span class="feature-text">سرعة فائقة</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎨</span>
+                        <span class="feature-text">تصميم عصري</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span class="feature-text">تجربة سلسة</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>تواصل معنا</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>اكتشف المزيد</span>
+                    </a>
+                </div>
+
+                <div class="countdown-container" data-aos="fade-up" data-aos-delay="800">
+                    <p class="countdown-label">الوقت المتبقي للإطلاق</p>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-unit">يوم</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-unit">ساعة</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-unit">دقيقة</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-unit">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>اسحب للأسفل</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="section-decoration">
+                <div class="islamic-pattern pattern-1"></div>
+                <div class="islamic-pattern pattern-2"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-badge">من نحن</span>
+                    <h2 class="section-title">TM <span class="title-accent">ENERGY</span></h2>
+                    <p class="section-subtitle">شريكك الموثوق في عالم المحركات والطاقة</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 5 L55 20 L55 45 L30 60 L5 45 L5 20 Z" stroke="url(#aboutGradient)" stroke-width="2" fill="none"/>
+                                    <path d="M30 20 L30 40 M20 30 L40 30" stroke="url(#aboutGradient)" stroke-width="2"/>
+                                    <defs>
+                                        <linearGradient id="aboutGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#D4AF37"/>
+                                            <stop offset="100%" style="stop-color:#FFD700"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3>شركة متخصصة</h3>
+                            <p>نحن شركة متخصصة في المحركات البحرية الخارجية والداخلية، ومولدات الكهرباء البنزين والديزل، والمعدات الزراعية والمضخات.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" stroke="url(#aboutGradient2)" stroke-width="2" fill="none"/>
+                                    <path d="M30 15 L30 30 L42 38" stroke="url(#aboutGradient2)" stroke-width="2" fill="none"/>
+                                    <defs>
+                                        <linearGradient id="aboutGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#D4AF37"/>
+                                            <stop offset="100%" style="stop-color:#FFD700"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3>خبرة واسعة</h3>
+                            <p>نقدم جميع العلامات التجارية للمحركات التي تجسد التكنولوجيا المتطورة والحرفية الدقيقة، مما يضمن موثوقية لا مثيل لها.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 30 Q30 10 50 30 Q30 50 10 30" stroke="url(#aboutGradient3)" stroke-width="2" fill="none"/>
+                                    <circle cx="30" cy="30" r="8" stroke="url(#aboutGradient3)" stroke-width="2" fill="none"/>
+                                    <defs>
+                                        <linearGradient id="aboutGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#D4AF37"/>
+                                            <stop offset="100%" style="stop-color:#FFD700"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3>هدفنا</h3>
+                            <p>هدفنا هو تقديم أعلى خدمة مميزة تنال استحسان العملاء والشركات والمصانع والجهات الحكومية.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-stats" data-aos="fade-left">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">سنوات خبرة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">عميل سعيد</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">علامة تجارية</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="24">0</span>
+                            <span class="stat-suffix">/7</span>
+                            <span class="stat-label">دعم فني</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="section-decoration">
+                <div class="geometric-shape shape-1"></div>
+                <div class="geometric-shape shape-2"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-badge">خدماتنا</span>
+                    <h2 class="section-title">ما <span class="title-accent">نقدمه</span></h2>
+                    <p class="section-subtitle">حلول متكاملة لجميع احتياجاتك</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40 10 L60 25 L60 50 L40 65 L20 50 L20 25 Z" stroke="url(#serviceGradient1)" stroke-width="2" fill="none"/>
+                                <path d="M40 25 L50 32 L50 45 L40 52 L30 45 L30 32 Z" fill="url(#serviceGradient1)"/>
+                                <circle cx="40" cy="38" r="5" fill="#0a0e27"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">المحركات البحرية</h3>
+                        <p class="service-description">محركات خارجية وداخلية من أفضل العلامات التجارية: ميركوري، هوندا، سوزوكي، ياماها</p>
+                        <div class="service-brands">
+                            <span class="brand-tag">Mercury</span>
+                            <span class="brand-tag">Honda</span>
+                            <span class="brand-tag">Suzuki</span>
+                            <span class="brand-tag">Yamaha</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="25" width="40" height="35" rx="3" stroke="url(#serviceGradient2)" stroke-width="2" fill="none"/>
+                                <circle cx="40" cy="42" r="8" stroke="url(#serviceGradient2)" stroke-width="2" fill="none"/>
+                                <path d="M40 38 L40 46 M36 42 L44 42" stroke="url(#serviceGradient2)" stroke-width="2"/>
+                                <path d="M25 25 L30 15 L50 15 L55 25" stroke="url(#serviceGradient2)" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">المولدات الكهربائية</h3>
+                        <p class="service-description">مولدات بنزين وديزل بقدرات متنوعة تلبي جميع الاحتياجات المنزلية والتجارية</p>
+                        <div class="service-brands">
+                            <span class="brand-tag">بنزين</span>
+                            <span class="brand-tag">ديزل</span>
+                            <span class="brand-tag">صامتة</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="25" stroke="url(#serviceGradient3)" stroke-width="2" fill="none"/>
+                                <circle cx="40" cy="40" r="15" stroke="url(#serviceGradient3)" stroke-width="2" fill="none"/>
+                                <circle cx="40" cy="40" r="5" fill="url(#serviceGradient3)"/>
+                                <path d="M40 15 L40 20 M40 60 L40 65 M15 40 L20 40 M60 40 L65 40" stroke="url(#serviceGradient3)" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">قطع الغيار</h3>
+                        <p class="service-description">قطع غيار أصلية وبدائل عالية الجودة لجميع أنواع المحركات والمولدات</p>
+                        <div class="service-brands">
+                            <span class="brand-tag">أصلي</span>
+                            <span class="brand-tag">بدائل</span>
+                            <span class="brand-tag">ضمان</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25 55 L40 25 L55 55" stroke="url(#serviceGradient4)" stroke-width="2" fill="none"/>
+                                <circle cx="40" cy="55" r="10" stroke="url(#serviceGradient4)" stroke-width="2" fill="none"/>
+                                <path d="M35 55 L40 60 L45 55 L40 50 Z" fill="url(#serviceGradient4)"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">الاكسسوارات</h3>
+                        <p class="service-description">اكسسوارات ومعدات بحرية وزراعية متنوعة بأعلى معايير الجودة</p>
+                        <div class="service-brands">
+                            <span class="brand-tag">بحرية</span>
+                            <span class="brand-tag">زراعية</span>
+                            <span class="brand-tag">صناعية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="contact">
+            <div class="cta-decoration">
+                <div class="lantern-decoration lantern-d1">
+                    <svg viewBox="0 0 50 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4 Q25 0 38 4 L35 10 Q25 7 15 10 Z" fill="#D4AF37"/>
+                        <path d="M8 10 Q4 30 8 48 Q25 57 42 48 Q46 30 42 10 Q25 4 8 10" fill="url(#ctaLantern1)"/>
+                        <path d="M10 48 Q25 54 40 48 L37 54 Q25 59 13 54 Z" fill="#D4AF37"/>
+                        <circle cx="25" cy="30" r="10" fill="url(#ctaGlow1)" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="ctaLantern1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a237e"/>
+                                <stop offset="100%" style="stop-color:#0d1642"/>
+                            </linearGradient>
+                            <radialGradient id="ctaGlow1" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.8"/>
+                                <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="lantern-decoration lantern-d2">
+                    <svg viewBox="0 0 40 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 Q20 0 30 3 L28 8 Q20 5 12 8 Z" fill="#D4AF37"/>
+                        <path d="M7 8 Q4 24 7 38 Q20 45 33 38 Q36 24 33 8 Q20 3 7 8" fill="url(#ctaLantern2)"/>
+                        <path d="M8 38 Q20 43 32 38 L30 43 Q20 47 10 43 Z" fill="#D4AF37"/>
+                        <circle cx="20" cy="24" r="8" fill="url(#ctaGlow2)" opacity="0.5"/>
+                        <defs>
+                            <linearGradient id="ctaLantern2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a237e"/>
+                                <stop offset="100%" style="stop-color:#0d1642"/>
+                            </linearGradient>
+                            <radialGradient id="ctaGlow2" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.7"/>
+                                <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="cta-title">هل تريد التواصل معنا؟</h2>
+                    <p class="cta-description">نحن هنا لمساعدتك في جميع استفساراتك. تواصل معنا الآن واحصل على أفضل العروض والخدمات.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="https://tmenergypower.com/pages/contact" class="btn btn-primary btn-large">
+                            <span>تواصل معنا الآن</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="https://tmenergypower.com/collections/all" class="btn btn-outline btn-large">
+                            <span>تصفح المنتجات</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">info@tmenergypower.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span class="contact-text">+966 XX XXX XXXX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">
+                            <span class="logo-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="28" stroke="url(#footerLogoGradient)" stroke-width="2" fill="none"/>
+                                    <path d="M20 30 L30 15 L40 30 L30 45 Z" fill="url(#footerLogoGradient)"/>
+                                    <circle cx="30" cy="30" r="8" fill="#0a0e27"/>
+                                    <defs>
+                                        <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#D4AF37"/>
+                                            <stop offset="100%" style="stop-color:#FFD700"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <span class="logo-text">TM<span class="logo-highlight">ENERGY</span></span>
+                        </a>
+                        <p class="footer-description">شريكك الموثوق في عالم المحركات البحرية والمولدات الكهربائية وقطع الغيار.</p>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <ul>
+                            <li><a href="#about">من نحن</a></li>
+                            <li><a href="#services">خدماتنا</a></li>
+                            <li><a href="#contact">تواصل معنا</a></li>
+                            <li><a href="https://tmenergypower.com/collections/all">المنتجات</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-social">
+                        <h4>تابعنا</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="TikTok">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">© 2026 TM Energy. جميع الحقوق محفوظة.</p>
+                    <p class="coming-soon">الموقع الجديد قيد الإنشاء 🚀</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
