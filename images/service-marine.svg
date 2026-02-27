@@ -1,0 +1,47 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0E27"/>
+      <stop offset="0.5" stop-color="#1A237E" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0D1642"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D4AF37"/>
+      <stop offset="0.55" stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#B8860B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 260) rotate(90) scale(240 360)">
+      <stop stop-color="#FFD700" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40" y="-40" width="1280" height="755" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- Background panel -->
+  <rect x="40" y="40" width="1120" height="595" rx="36" fill="url(#bg)" stroke="url(#gold)" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M88 170C220 120 330 118 460 165C600 216 710 218 860 165C985 120 1090 120 1112 135" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="14" stroke-linecap="round"/>
+  <path d="M92 210C220 160 330 158 460 205C600 256 710 258 860 205C985 160 1090 160 1110 175" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="640" cy="260" r="220" fill="url(#glow)" filter="url(#soft)"/>
+
+  <!-- Waves -->
+  <path d="M160 470C250 415 340 415 430 470C520 525 610 525 700 470C790 415 880 415 970 470" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round"/>
+  <path d="M180 515C260 470 340 470 420 515C500 560 580 560 660 515C740 470 820 470 900 515" stroke="#D4AF37" stroke-opacity="0.22" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Engine silhouette (line art) -->
+  <path d="M520 190H690C720 190 744 214 744 244V298C744 328 720 352 690 352H640V392C640 410 626 424 608 424H594C576 424 562 410 562 392V352H520C490 352 466 328 466 298V244C466 214 490 190 520 190Z" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M508 242H702" stroke="url(#gold)" stroke-opacity="0.9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M606 352V460" stroke="url(#gold)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Propeller -->
+  <circle cx="606" cy="494" r="28" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M606 466C586 452 564 444 542 442C560 470 572 490 576 512C592 498 600 484 606 466Z" fill="url(#gold)" fill-opacity="0.9"/>
+  <path d="M634 494C650 472 672 456 694 448C682 478 668 498 650 514C644 506 638 500 634 494Z" fill="url(#gold)" fill-opacity="0.85"/>
+  <path d="M606 522C624 540 634 562 638 584C610 576 592 562 578 544C588 536 596 528 606 522Z" fill="url(#gold)" fill-opacity="0.8"/>
+
+  <!-- Small accents -->
+  <circle cx="522" cy="308" r="6" fill="#FFD700" fill-opacity="0.7"/>
+  <circle cx="690" cy="308" r="6" fill="#FFD700" fill-opacity="0.7"/>
+  <path d="M760 210C812 210 858 240 878 286" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="10" stroke-linecap="round"/>
+</svg>

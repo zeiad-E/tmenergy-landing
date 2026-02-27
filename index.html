@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TM Energy - الموقع قيد الإنشاء</title>
-    <meta name="description" content="TM Energy - محركات بحرية، مولدات كهرباء، قطع غيار واكسسوارات. الموقع الجديد قيد الإنشاء.">
+    <title data-i18n="meta.title">TM Energy - الموقع قيد الإنشاء</title>
+    <meta name="description" content="TM Energy - محركات بحرية، مولدات كهرباء، قطع غيار واكسسوارات. الموقع الجديد قيد الإنشاء." data-i18n="meta.description" data-i18n-attr="content">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,21 +41,7 @@
                     </defs>
                 </svg>
             </div>
-            <div class="loading-text">
-                <span class="loading-letter">ج</span>
-                <span class="loading-letter">ا</span>
-                <span class="loading-letter">ر</span>
-                <span class="loading-letter">ي</span>
-                <span class="loading-letter space"> </span>
-                <span class="loading-letter">ا</span>
-                <span class="loading-letter">ل</span>
-                <span class="loading-letter">ت</span>
-                <span class="loading-letter">ح</span>
-                <span class="loading-letter">م</span>
-                <span class="loading-letter">ي</span>
-                <span class="loading-letter">ل</span>
-                <span class="loading-letter">...</span>
-            </div>
+            <div class="loading-text" id="loading-text" aria-live="polite"></div>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
             </div>
@@ -89,10 +75,13 @@
                     </span>
                     <span class="logo-text">TM<span class="logo-highlight">ENERGY</span></span>
                 </a>
-                <div class="nav-links">
-                    <a href="#about" class="nav-link">من نحن</a>
-                    <a href="#services" class="nav-link">خدماتنا</a>
-                    <a href="#contact" class="nav-link">تواصل معنا</a>
+                <div class="nav-actions">
+                    <div class="nav-links">
+                        <a href="#about" class="nav-link" data-i18n="nav.about">من نحن</a>
+                        <a href="#services" class="nav-link" data-i18n="nav.services">خدماتنا</a>
+                        <a href="#contact" class="nav-link" data-i18n="nav.contact">تواصل معنا</a>
+                    </div>
+                    <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language" data-i18n="lang.aria.switch" data-i18n-attr="aria-label"></button>
                 </div>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <span></span>
@@ -104,9 +93,10 @@
 
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="#about" class="mobile-nav-link">من نحن</a>
-            <a href="#services" class="mobile-nav-link">خدماتنا</a>
-            <a href="#contact" class="mobile-nav-link">تواصل معنا</a>
+            <button class="mobile-lang-toggle" id="mobile-lang-toggle" type="button" aria-label="Switch language" data-i18n="lang.aria.switch" data-i18n-attr="aria-label"></button>
+            <a href="#about" class="mobile-nav-link" data-i18n="nav.about">من نحن</a>
+            <a href="#services" class="mobile-nav-link" data-i18n="nav.services">خدماتنا</a>
+            <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">تواصل معنا</a>
         </div>
 
         <!-- Hero Section -->
@@ -114,7 +104,7 @@
             <div class="hero-decoration">
                 <!-- Crescent Moon -->
                 <div class="crescent-moon">
-                    <img src="images/crescent-moon.png" alt="هلال رمضان" class="crescent-moon-img">
+                    <img src="images/crescent-moon.png" alt="هلال رمضان" class="crescent-moon-img" data-i18n="hero.crescentAlt" data-i18n-attr="alt">
                 </div>
                 <!-- Floating Lanterns -->
                 <div class="floating-lantern lantern-1">
@@ -176,63 +166,63 @@
             <div class="hero-content">
                 <div class="hero-badge" data-aos="fade-down">
                     <span class="badge-icon">🌙</span>
-                    <span class="badge-text">رمضان كريم</span>
+                    <span class="badge-text" data-i18n="hero.badge">رمضان كريم</span>
                 </div>
                 
                 <h1 class="hero-title" data-aos="fade-up">
-                    <span class="title-line">موقعنا الجديد</span>
-                    <span class="title-line highlight">قيد الإنشاء</span>
+                    <span class="title-line" data-i18n="hero.titleLine1">موقعنا الجديد</span>
+                    <span class="title-line highlight" data-i18n="hero.titleLine2">قيد الإنشاء</span>
                 </h1>
                 
-                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.description">
                     نحن نعمل على بناء تجربة رقمية استثنائية تجمع بين قوة الأداء وجمال التصميم. ترقبوا المفاجآت قريباً!
                 </p>
 
                 <div class="hero-features" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-item">
                         <span class="feature-icon">⚡</span>
-                        <span class="feature-text">سرعة فائقة</span>
+                        <span class="feature-text" data-i18n="hero.features.fast">سرعة فائقة</span>
                     </div>
                     <div class="feature-item">
                         <span class="feature-icon">🎨</span>
-                        <span class="feature-text">تصميم عصري</span>
+                        <span class="feature-text" data-i18n="hero.features.design">تصميم عصري</span>
                     </div>
                     <div class="feature-item">
                         <span class="feature-icon">📱</span>
-                        <span class="feature-text">تجربة سلسة</span>
+                        <span class="feature-text" data-i18n="hero.features.smooth">تجربة سلسة</span>
                     </div>
                 </div>
 
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="600">
                     <a href="#contact" class="btn btn-primary">
-                        <span>تواصل معنا</span>
+                        <span data-i18n="hero.cta.contact">تواصل معنا</span>
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
                     <a href="#about" class="btn btn-secondary">
-                        <span>اكتشف المزيد</span>
+                        <span data-i18n="hero.cta.discover">اكتشف المزيد</span>
                     </a>
                 </div>
 
                 <div class="countdown-container" data-aos="fade-up" data-aos-delay="800">
-                    <p class="countdown-label">الوقت المتبقي للإطلاق</p>
-                    <div class="countdown" id="countdown">
+                    <p class="countdown-label" data-i18n="countdown.label">الوقت المتبقي للإطلاق</p>
+                    <div class="countdown" id="countdown" data-countdown-date="2026-04-01T00:00:00">
                         <div class="countdown-item">
                             <span class="countdown-value" id="days">00</span>
-                            <span class="countdown-unit">يوم</span>
+                            <span class="countdown-unit" data-i18n="countdown.units.days">يوم</span>
                         </div>
                         <div class="countdown-item">
                             <span class="countdown-value" id="hours">00</span>
-                            <span class="countdown-unit">ساعة</span>
+                            <span class="countdown-unit" data-i18n="countdown.units.hours">ساعة</span>
                         </div>
                         <div class="countdown-item">
                             <span class="countdown-value" id="minutes">00</span>
-                            <span class="countdown-unit">دقيقة</span>
+                            <span class="countdown-unit" data-i18n="countdown.units.minutes">دقيقة</span>
                         </div>
                         <div class="countdown-item">
                             <span class="countdown-value" id="seconds">00</span>
-                            <span class="countdown-unit">ثانية</span>
+                            <span class="countdown-unit" data-i18n="countdown.units.seconds">ثانية</span>
                         </div>
                     </div>
                 </div>
@@ -242,7 +232,7 @@
                 <div class="mouse">
                     <div class="wheel"></div>
                 </div>
-                <p>اسحب للأسفل</p>
+                <p data-i18n="hero.scroll">اسحب للأسفل</p>
             </div>
         </section>
 
@@ -255,9 +245,9 @@
             
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">من نحن</span>
+                    <span class="section-badge" data-i18n="about.badge">من نحن</span>
                     <h2 class="section-title">TM <span class="title-accent">ENERGY</span></h2>
-                    <p class="section-subtitle">شريكك الموثوق في عالم المحركات والطاقة</p>
+                    <p class="section-subtitle" data-i18n="about.subtitle">شريكك الموثوق في عالم المحركات والطاقة</p>
                 </div>
 
                 <div class="about-content">
@@ -275,8 +265,8 @@
                                     </defs>
                                 </svg>
                             </div>
-                            <h3>شركة متخصصة</h3>
-                            <p>نحن شركة متخصصة في المحركات البحرية الخارجية والداخلية، ومولدات الكهرباء البنزين والديزل، والمعدات الزراعية والمضخات.</p>
+                            <h3 data-i18n="about.cards.specialized.title">شركة متخصصة</h3>
+                            <p data-i18n="about.cards.specialized.desc">نحن شركة متخصصة في المحركات البحرية الخارجية والداخلية، ومولدات الكهرباء البنزين والديزل، والمعدات الزراعية والمضخات.</p>
                         </div>
                         
                         <div class="about-card">
@@ -292,8 +282,8 @@
                                     </defs>
                                 </svg>
                             </div>
-                            <h3>خبرة واسعة</h3>
-                            <p>نقدم جميع العلامات التجارية للمحركات التي تجسد التكنولوجيا المتطورة والحرفية الدقيقة، مما يضمن موثوقية لا مثيل لها.</p>
+                            <h3 data-i18n="about.cards.experience.title">خبرة واسعة</h3>
+                            <p data-i18n="about.cards.experience.desc">نقدم جميع العلامات التجارية للمحركات التي تجسد التكنولوجيا المتطورة والحرفية الدقيقة، مما يضمن موثوقية لا مثيل لها.</p>
                         </div>
                         
                         <div class="about-card">
@@ -309,8 +299,8 @@
                                     </defs>
                                 </svg>
                             </div>
-                            <h3>هدفنا</h3>
-                            <p>هدفنا هو تقديم أعلى خدمة مميزة تنال استحسان العملاء والشركات والمصانع والجهات الحكومية.</p>
+                            <h3 data-i18n="about.cards.mission.title">هدفنا</h3>
+                            <p data-i18n="about.cards.mission.desc">هدفنا هو تقديم أعلى خدمة مميزة تنال استحسان العملاء والشركات والمصانع والجهات الحكومية.</p>
                         </div>
                     </div>
 
@@ -318,22 +308,22 @@
                         <div class="stat-item">
                             <span class="stat-number" data-count="10">0</span>
                             <span class="stat-suffix">+</span>
-                            <span class="stat-label">سنوات خبرة</span>
+                            <span class="stat-label" data-i18n="about.stats.years">سنوات خبرة</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-count="500">0</span>
                             <span class="stat-suffix">+</span>
-                            <span class="stat-label">عميل سعيد</span>
+                            <span class="stat-label" data-i18n="about.stats.clients">عميل سعيد</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-count="50">0</span>
                             <span class="stat-suffix">+</span>
-                            <span class="stat-label">علامة تجارية</span>
+                            <span class="stat-label" data-i18n="about.stats.brands">علامة تجارية</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-count="24">0</span>
                             <span class="stat-suffix">/7</span>
-                            <span class="stat-label">دعم فني</span>
+                            <span class="stat-label" data-i18n="about.stats.support">دعم فني</span>
                         </div>
                     </div>
                 </div>
@@ -349,9 +339,12 @@
             
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">خدماتنا</span>
-                    <h2 class="section-title">ما <span class="title-accent">نقدمه</span></h2>
-                    <p class="section-subtitle">حلول متكاملة لجميع احتياجاتك</p>
+                    <span class="section-badge" data-i18n="services.badge">خدماتنا</span>
+                    <h2 class="section-title">
+                        <span data-i18n="services.title.pre">ما</span>
+                        <span class="title-accent" data-i18n="services.title.accent">نقدمه</span>
+                    </h2>
+                    <p class="section-subtitle" data-i18n="services.subtitle">حلول متكاملة لجميع احتياجاتك</p>
                 </div>
 
                 <div class="services-grid">
@@ -363,8 +356,11 @@
                                 <circle cx="40" cy="38" r="5" fill="#0a0e27"/>
                             </svg>
                         </div>
-                        <h3 class="service-title">المحركات البحرية</h3>
-                        <p class="service-description">محركات خارجية وداخلية من أفضل العلامات التجارية: ميركوري، هوندا، سوزوكي، ياماها</p>
+                        <div class="service-media">
+                            <img src="images/service-marine.svg" class="service-image" alt="المحركات البحرية" loading="lazy" decoding="async" data-i18n="services.cards.marineEngines.imageAlt" data-i18n-attr="alt">
+                        </div>
+                        <h3 class="service-title" data-i18n="services.cards.marineEngines.title">المحركات البحرية</h3>
+                        <p class="service-description" data-i18n="services.cards.marineEngines.desc">محركات خارجية وداخلية من أفضل العلامات التجارية: ميركوري، هوندا، سوزوكي، ياماها</p>
                         <div class="service-brands">
                             <span class="brand-tag">Mercury</span>
                             <span class="brand-tag">Honda</span>
@@ -382,12 +378,15 @@
                                 <path d="M25 25 L30 15 L50 15 L55 25" stroke="url(#serviceGradient2)" stroke-width="2" fill="none"/>
                             </svg>
                         </div>
-                        <h3 class="service-title">المولدات الكهربائية</h3>
-                        <p class="service-description">مولدات بنزين وديزل بقدرات متنوعة تلبي جميع الاحتياجات المنزلية والتجارية</p>
+                        <div class="service-media">
+                            <img src="images/service-generator.svg" class="service-image" alt="المولدات الكهربائية" loading="lazy" decoding="async" data-i18n="services.cards.generators.imageAlt" data-i18n-attr="alt">
+                        </div>
+                        <h3 class="service-title" data-i18n="services.cards.generators.title">المولدات الكهربائية</h3>
+                        <p class="service-description" data-i18n="services.cards.generators.desc">مولدات بنزين وديزل بقدرات متنوعة تلبي جميع الاحتياجات المنزلية والتجارية</p>
                         <div class="service-brands">
-                            <span class="brand-tag">بنزين</span>
-                            <span class="brand-tag">ديزل</span>
-                            <span class="brand-tag">صامتة</span>
+                            <span class="brand-tag" data-i18n="services.cards.generators.tags.gasoline">بنزين</span>
+                            <span class="brand-tag" data-i18n="services.cards.generators.tags.diesel">ديزل</span>
+                            <span class="brand-tag" data-i18n="services.cards.generators.tags.silent">صامتة</span>
                         </div>
                     </div>
 
@@ -400,12 +399,15 @@
                                 <path d="M40 15 L40 20 M40 60 L40 65 M15 40 L20 40 M60 40 L65 40" stroke="url(#serviceGradient3)" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="service-title">قطع الغيار</h3>
-                        <p class="service-description">قطع غيار أصلية وبدائل عالية الجودة لجميع أنواع المحركات والمولدات</p>
+                        <div class="service-media">
+                            <img src="images/service-spareparts.svg" class="service-image" alt="قطع الغيار" loading="lazy" decoding="async" data-i18n="services.cards.spareParts.imageAlt" data-i18n-attr="alt">
+                        </div>
+                        <h3 class="service-title" data-i18n="services.cards.spareParts.title">قطع الغيار</h3>
+                        <p class="service-description" data-i18n="services.cards.spareParts.desc">قطع غيار أصلية وبدائل عالية الجودة لجميع أنواع المحركات والمولدات</p>
                         <div class="service-brands">
-                            <span class="brand-tag">أصلي</span>
-                            <span class="brand-tag">بدائل</span>
-                            <span class="brand-tag">ضمان</span>
+                            <span class="brand-tag" data-i18n="services.cards.spareParts.tags.original">أصلي</span>
+                            <span class="brand-tag" data-i18n="services.cards.spareParts.tags.alternatives">بدائل</span>
+                            <span class="brand-tag" data-i18n="services.cards.spareParts.tags.warranty">ضمان</span>
                         </div>
                     </div>
 
@@ -417,12 +419,15 @@
                                 <path d="M35 55 L40 60 L45 55 L40 50 Z" fill="url(#serviceGradient4)"/>
                             </svg>
                         </div>
-                        <h3 class="service-title">الاكسسوارات</h3>
-                        <p class="service-description">اكسسوارات ومعدات بحرية وزراعية متنوعة بأعلى معايير الجودة</p>
+                        <div class="service-media">
+                            <img src="images/service-accessories.svg" class="service-image" alt="الاكسسوارات" loading="lazy" decoding="async" data-i18n="services.cards.accessories.imageAlt" data-i18n-attr="alt">
+                        </div>
+                        <h3 class="service-title" data-i18n="services.cards.accessories.title">الاكسسوارات</h3>
+                        <p class="service-description" data-i18n="services.cards.accessories.desc">اكسسوارات ومعدات بحرية وزراعية متنوعة بأعلى معايير الجودة</p>
                         <div class="service-brands">
-                            <span class="brand-tag">بحرية</span>
-                            <span class="brand-tag">زراعية</span>
-                            <span class="brand-tag">صناعية</span>
+                            <span class="brand-tag" data-i18n="services.cards.accessories.tags.marine">بحرية</span>
+                            <span class="brand-tag" data-i18n="services.cards.accessories.tags.agriculture">زراعية</span>
+                            <span class="brand-tag" data-i18n="services.cards.accessories.tags.industrial">صناعية</span>
                         </div>
                     </div>
                 </div>
@@ -472,18 +477,18 @@
             
             <div class="container">
                 <div class="cta-content" data-aos="fade-up">
-                    <h2 class="cta-title">هل تريد التواصل معنا؟</h2>
-                    <p class="cta-description">نحن هنا لمساعدتك في جميع استفساراتك. تواصل معنا الآن واحصل على أفضل العروض والخدمات.</p>
+                    <h2 class="cta-title" data-i18n="cta.title">هل تريد التواصل معنا؟</h2>
+                    <p class="cta-description" data-i18n="cta.description">نحن هنا لمساعدتك في جميع استفساراتك. تواصل معنا الآن واحصل على أفضل العروض والخدمات.</p>
                     
                     <div class="cta-buttons">
                         <a href="https://tmenergypower.com/pages/contact" class="btn btn-primary btn-large">
-                            <span>تواصل معنا الآن</span>
+                            <span data-i18n="cta.buttons.contactNow">تواصل معنا الآن</span>
                             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
                         </a>
                         <a href="https://tmenergypower.com/collections/all" class="btn btn-outline btn-large">
-                            <span>تصفح المنتجات</span>
+                            <span data-i18n="cta.buttons.browseProducts">تصفح المنتجات</span>
                         </a>
                     </div>
 
@@ -522,21 +527,21 @@
                             </span>
                             <span class="logo-text">TM<span class="logo-highlight">ENERGY</span></span>
                         </a>
-                        <p class="footer-description">شريكك الموثوق في عالم المحركات البحرية والمولدات الكهربائية وقطع الغيار.</p>
+                        <p class="footer-description" data-i18n="footer.description">شريكك الموثوق في عالم المحركات البحرية والمولدات الكهربائية وقطع الغيار.</p>
                     </div>
 
                     <div class="footer-links">
-                        <h4>روابط سريعة</h4>
+                        <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
                         <ul>
-                            <li><a href="#about">من نحن</a></li>
-                            <li><a href="#services">خدماتنا</a></li>
-                            <li><a href="#contact">تواصل معنا</a></li>
-                            <li><a href="https://tmenergypower.com/collections/all">المنتجات</a></li>
+                            <li><a href="#about" data-i18n="nav.about">من نحن</a></li>
+                            <li><a href="#services" data-i18n="nav.services">خدماتنا</a></li>
+                            <li><a href="#contact" data-i18n="nav.contact">تواصل معنا</a></li>
+                            <li><a href="https://tmenergypower.com/collections/all" data-i18n="footer.products">المنتجات</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-social">
-                        <h4>تابعنا</h4>
+                        <h4 data-i18n="footer.followUs">تابعنا</h4>
                         <div class="social-links">
                             <a href="#" class="social-link" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -558,8 +563,8 @@
                 </div>
 
                 <div class="footer-bottom">
-                    <p class="copyright">© 2026 TM Energy. جميع الحقوق محفوظة.</p>
-                    <p class="coming-soon">الموقع الجديد قيد الإنشاء 🚀</p>
+                    <p class="copyright" data-i18n="footer.copyright">© 2026 TM Energy. جميع الحقوق محفوظة.</p>
+                    <p class="coming-soon" data-i18n="footer.comingSoon">الموقع الجديد قيد الإنشاء 🚀</p>
                 </div>
             </div>
         </footer>

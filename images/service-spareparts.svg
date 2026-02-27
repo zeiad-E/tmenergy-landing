@@ -1,0 +1,39 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0E27"/>
+      <stop offset="0.55" stop-color="#1A237E" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#0D1642"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D4AF37"/>
+      <stop offset="0.55" stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#B8860B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(610 270) rotate(90) scale(250 380)">
+      <stop stop-color="#FFD700" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="40" y="40" width="1120" height="595" rx="36" fill="url(#bg)" stroke="url(#gold)" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="610" cy="270" r="230" fill="url(#glow)"/>
+
+  <!-- Gear -->
+  <path d="M610 192L636 206L664 198L682 222L712 224L716 254L742 270L716 286L712 316L682 318L664 342L636 334L610 348L584 334L556 342L538 318L508 316L504 286L478 270L504 254L508 224L538 222L556 198L584 206L610 192Z" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="610" cy="270" r="48" stroke="url(#gold)" stroke-width="6"/>
+  <circle cx="610" cy="270" r="10" fill="#FFD700" fill-opacity="0.7"/>
+
+  <!-- Wrench -->
+  <path d="M740 412C716 388 704 356 708 324C688 328 668 336 652 350L510 492C496 506 496 528 510 542L530 562C544 576 566 576 580 562L722 420C736 406 744 386 740 366C770 370 798 382 820 404L792 432C780 420 764 412 746 410Z" fill="url(#gold)" fill-opacity="0.12" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M540 522L690 372" stroke="url(#gold)" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Small parts -->
+  <rect x="360" y="430" width="120" height="60" rx="16" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="4"/>
+  <path d="M392 460H448" stroke="url(#gold)" stroke-opacity="0.9" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="912" cy="220" r="22" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="4"/>
+  <circle cx="912" cy="220" r="6" fill="#FFD700" fill-opacity="0.6"/>
+
+  <!-- Subtle dotted trail -->
+  <path d="M230 220C300 180 370 180 440 220C510 260 580 260 650 220" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 16"/>
+</svg>
